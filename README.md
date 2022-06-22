@@ -1,14 +1,28 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome AndrosDe,
+Welcome,
 
 This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
 
 ## Reminders
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+In order to start have the database you have to:
+
+### 1:
+gitpod /workspace/Tasks (main) $ psql
+psql (12.11 (Ubuntu 12.11-1.pgdg20.04+1))
+Type "help" for help.
+
+postgres=# CREATE DATABASE taskmanager;
+CREATE DATABASE
+postgres=# \c taskmanager;
+You are now connected to database "taskmanager" as user "gitpod".
+taskmanager=# \q
+
+### 2:
+gitpod /workspace/Tasks (main) $ python3
+from taskmanager import db
+db.create_all()
 
 ## Creating the Heroku app
 
